@@ -23,7 +23,7 @@
 
 # Overview
 
-Directus docker images can be found in [docker hub](https://hub.docker.com/r/directus/) under `directus` username. Images are pushed automatically each time a new release is created in [api](https://github.com/directus/api) or [app](https://github.com/directus/app) repositories.
+Directus docker images can be found in [docker hub](https://hub.docker.com/u/ministryofprogramming) under `ministryofprogramming` username.
 
 # API Container
 
