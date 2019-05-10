@@ -7,11 +7,11 @@
 export DOCKER_PUSH=${DOCKER_PUSH:-"1"}
 export DOCKER_PROJECTS=./projects
 
-export BUILDER_IMAGE=${BUILDER_IMAGE:-"directus/builder:latest"}
+export BUILDER_IMAGE=${BUILDER_IMAGE:-"ministryofprogramming/directus-builder:latest"}
 
-export TARGET_IMAGE_BUILDER=${TARGET_IMAGE_BUILDER:-"directus/builder"}
-export TARGET_IMAGE_API=${TARGET_IMAGE_API:-"directus/api"}
-export TARGET_IMAGE_APP=${TARGET_IMAGE_APP:-"directus/app"}
+export TARGET_IMAGE_BUILDER=${TARGET_IMAGE_BUILDER:-"ministryofprogramming/directus-builder"}
+export TARGET_IMAGE_API=${TARGET_IMAGE_API:-"ministryofprogramming/directus-api"}
+export TARGET_IMAGE_APP=${TARGET_IMAGE_APP:-"ministryofprogramming/directus-app"}
 export TARGET_TAG_SUFFIX=${TARGET_TAG_SUFFIX:-""}
 
 export PROJECT_NAME=${PROJECT_NAME:-"<empty>"}
