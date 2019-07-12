@@ -30,7 +30,7 @@ ROUTER_BASE_URL=$(echo "${ROUTER_BASE_URL:-/}" | sed 's#/#\\/#g')
 
 # Replace variables
 cat /directus/config.js | \
-sed -e 's#      \"https://demo-api.directus.app/_/\": \"Directus Demo API\"#'$VALUES'#g' | \
+sed -e 's#      \"../_/\": \"Directus Demo API\"#'$VALUES'#g' | \
 sed -e 's/allowOtherAPI: false/allowOtherAPI: '${ALLOW_OTHER_API:-false}'/g' | \
 sed -e 's/routerBaseUrl: "\/"/routerBaseUrl: "'${ROUTER_BASE_URL}'"/g' | \
 sed -e 's/routerMode: "hash"/routerMode: "'${ROUTER_MODE:-hash}'"/g' > /usr/share/nginx/html/config.js
