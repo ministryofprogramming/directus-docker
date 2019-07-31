@@ -1,6 +1,6 @@
 FROM alpine
 
-RUN apk add --update bash git curl rsync && \
+RUN apk add --update bash git curl rsync unzip && \
     rm -f /tmp/* /etc/apk/cache/*
 
 ENV PATH="/directus/bin:${PATH}"

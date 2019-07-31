@@ -2,7 +2,7 @@
 
 # Project.
 export PROJECT_NAME=builder
-export PROJECT_TAG=1.0.0 # Update version before running the build script.
+export PROJECT_TAG=1.0.1 # Update version before running the build script.
 export PROJECT_TAG_ALIASES=latest # Remove if it's not the latest version.
 
 # Docker Hub credentials.

@@ -25,10 +25,10 @@ directus_download() {
 
     echo "Fetching '${repository}'..."
 
-    local url="https://github.com/directus/${repository}/archive/v${version}.tar.gz"
+    local url="https://github.com/directus/${repository}/releases/download/v${version}/${repository}-build-v${version}.zip"
 
     local download_dir="/tmp/directus/${repository}"
-    local download_file="${download_dir}/release.tar.gz"
+    local download_file="${download_dir}/release.zip"
 
     # Folders
     echo "> Creating directories..."
@@ -45,12 +45,12 @@ directus_download() {
 
     # Extract and delete
     echo "> Extracting release files..."
-    tar -xzf "${download_file}" -C "${download_dir}"
+    unzip -q "${download_file}" -d "${download_dir}"
     rm -rf "${download_file}"
 
     # Move
     echo "> Copying to target folder..."
-    rsync -a "${download_dir}/${repository}-${version}/" "${location}/"
+    rsync -a "${download_dir}/${repository}-build/" "${location}/"
     rm -rf "${download_dir}"
 
     # Finish
