@@ -1,5 +1,6 @@
 /projects/builder/tmp/
 /projects/builder/dist/
+/projects/app/hotfix/**/*
 /webhooks/src/config.php
 .env
 volumes

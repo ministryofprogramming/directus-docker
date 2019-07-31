@@ -26,6 +26,9 @@ COPY default.conf /etc/nginx/conf.d/default.conf
 RUN mkdir /directus && \
     mv /usr/share/nginx/html/config_example.js /directus/config.js
 
+# Apply hotfix
+COPY hotfix /usr/share/nginx/html/
+
 # Copy entrypoint
 COPY entrypoint.sh /root/entrypoint.sh
 RUN chmod +x /root/entrypoint.sh
