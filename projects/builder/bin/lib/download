@@ -50,7 +50,13 @@ directus_download() {
 
     # Move
     echo "> Copying to target folder..."
-    rsync -a "${download_dir}/${repository}-build/" "${location}/"
+
+    if [[ "$repository" == "app" ]]; then
+        rsync -a "${download_dir}/dist/" "${location}/"
+    else
+        rsync -a "${download_dir}/${repository}-build/" "${location}/"
+    fi
+
     rm -rf "${download_dir}"
 
     # Finish
